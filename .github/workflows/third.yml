@@ -2,8 +2,7 @@ name: Event Details on issues
 on: issues
 jobs:
  print:
+  runs-on: ubuntu-lastest
   steps:
-    runs-on: ubuntu-lastest
-    steps:
-      - name: Output event details
-        run: echo "${{ toJSON(github.event) }}"
+    - name: Output event details
+      run: echo "${{ toJSON(github.event) }}"
